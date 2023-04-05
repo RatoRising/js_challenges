@@ -1,20 +1,23 @@
-// Reverse a string
+// Create a function that reverses any given string
 
-function reverseAString_1(str) {
-    let newStr = '';
-    for (let i = str.length - 1; i >= 0; i--) {
-        newStr += str[i];
-        console.log(newStr); // Inside the loop the console.log will display the whole log for each loop as it is part of it.
-    }
-}
-let result_1 = reverseAString_1('Hello')
-
-
-function reverseAString_2(str) {
+// Method 1
+function reverseString1(str) {
     let newStr = '';
     for (let i = str.length - 1; i >= 0; i--) {
         newStr += str[i];
     }
-    console.log(newStr); // Outside the loop the console.log will display only the final result after complete all the iterations.
+    return newStr;
 }
-let result_2 = reverseAString_2('Hello')
+console.log(reverseString1('Boost the world!'));
+
+// Method 2
+const reverseString2 = (str) => {
+    return Array.from(str).reverse().join('')
+}
+console.log(reverseString2('Boost the world!'));
+
+// Method 3
+const reverseString3 = (str) => {
+    return str.split('').reverse().join('')
+}
+console.log(reverseString3('Boost the world!'));

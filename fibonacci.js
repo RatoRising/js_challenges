@@ -11,9 +11,7 @@ output:	0
  */
 
 
-let numberToFibo = 9;
-
-function fibo() {
+function fibo(numberToFibo) {
 	let n1 = 0;
 	let n2 = 1;
 	let next = undefined;
@@ -25,8 +23,9 @@ function fibo() {
 		n2 = next; // 1
 	}
 }
-fibo();
+fibo(8);
 
+//This is what happens during the iteration
 next = 2;
 n1 = 1;
 n2 = next; // 2
